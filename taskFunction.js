@@ -26,17 +26,6 @@ function addTask() {
 }
 function addingTask(title, taskId) {
     var mainClass = document.getElementById('mainClass');
-    // mainClass.innerHTML += `
-    // 	<div id="main" class="main container">
-    // 		<div class="maindata input-group mb-3">
-    // 			<div class="input-group-text">
-    // 				<input class="form-check-input mt-0 checkbox1" type="checkbox" value="" aria-label="Checkbox for following text input" onchange="checkBox(this, '${taskId}')">
-    // 			</div>
-    // 			<input type="text" class="form-control inputClass" aria-label="Text input with checkbox" value="${title}" id="${taskId}" readonly>
-    // 			<button type="button" class="btn btn-danger" onclick="removeTask(this, '${taskId}')">Delete</button>
-    // 		</div>
-    // 	</div>
-    // `;
     mainClass.innerHTML += "\n\t<div id=\"main\" class=\"main container\">\n\t\t<div class=\"maindata input-group mb-3 justify-content-center align-items-center d-flex\">\n\t\t\t<div class=\"input-group-text rounded checkboxheight\">\n\t\t\t\t<input class=\"form-check-input mt-0 checkbox1\" type=\"checkbox\" value=\"\" aria-label=\"Checkbox for following text input\" onchange=\"checkBox(this, '".concat(taskId, "')\">\n\t\t\t</div>\n\t\t\t<div class=\"mainTask rounded\">\n\t\t\t\t<span class=\"title\">").concat(title, "</span>\n\t\t\t</div>\n\t\t\t<button type=\"button\" class=\"btn btn-danger rounded\" onclick=\"removeTask(this, '").concat(taskId, "')\" id=\"deleteButton\">Delete</button>\n\t\t</div>\n\t</div>\n\t");
 }
 function removeTask(event, taskId) {
@@ -67,9 +56,11 @@ function checkBox(event, taskId) {
 }
 function reCheck() {
     var checkBox = document.querySelectorAll(".checkbox1");
+    var mainTask = document.querySelectorAll('.title');
     for (var i = 0; i < checkBox.length; i++) {
         if (dataCollection[i]['done'] === true) {
             checkBox[i].checked = true;
+            mainTask[i].style.textDecoration = 'line-through';
         }
     }
 }

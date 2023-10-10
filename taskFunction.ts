@@ -82,10 +82,12 @@ function checkBox(event: any, taskId: string | number): void{
 
 function reCheck(){
 	const checkBox = document.querySelectorAll(".checkbox1") as NodeListOf<HTMLInputElement>;
+	const mainTask = document.querySelectorAll('.title') as NodeListOf<HTMLInputElement>;
 
 	for(let i=0; i < checkBox.length; i++){
 		if(dataCollection[i]['done'] === true){
 			checkBox[i].checked = true;
+			mainTask[i].style.textDecoration = 'line-through';
 		}
 	}
 }
