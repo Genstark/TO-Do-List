@@ -1,0 +1,99 @@
+.background{
+	background-color: cornsilk;
+}
+
+h1{
+	text-align: center;
+	text-decoration: 2px solid underline;
+	color: darkgray;
+	font-family: cursive;
+}
+
+h3{
+	text-align: center;
+	text-decoration: 2px solid underline;
+	color: darkgray;
+	font-family: cursive;
+}
+
+.p{
+	text-align: center;
+	text-decoration: 2px solid underline;
+	color: darkgray;
+	font-family: cursive;
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+	box-sizing: border-box;
+}
+
+.userinput{
+	border-radius: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	width: 430px;
+	height: 38px;
+	background-color: antiquewhite;
+	color: black;
+	border-color: white;
+	outline-color: cornsilk;
+	box-sizing: border-box;
+	padding-left: 13px;
+}
+
+.add{
+	margin-left: 10px;
+    margin-bottom: 5px;
+    width: 103px;
+    height: 42px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    border-radius: 70px;
+    background-color: #FAD0B4;
+    color: #213351;
+    border-color: #FEEFE5;
+    border-width: 3px;
+}
+
+.del{
+	margin-left: 15px;
+    width: 118px;
+    height: 34px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    border-radius: 70px;
+    background-color: lawngreen;
+    color: brown;
+    border-color: lawngreen;
+    border-width: 3px;
+    display: none;
+}
+
+.main{
+    margin-top: 18px;
+}
+
+.mainTask{
+	width: 65%;
+	border: 1px solid black;
+	background-color: #e9ecef;
+	height: 37px;
+	padding-top: 4px;
+    padding-left: 7px;
+    font-weight: bold;
+}
+
+.checkboxheight{
+	height: 37px;
+	margin-right: 3px;
+}
+
+#deleteButton{
+	margin-left: 1px;
+}
