@@ -94,11 +94,10 @@ function reCheck(){
 
 document.addEventListener("DOMContentLoaded", function(){
     const storageData: any = localStorage.getItem("item");
-
+	const parseData = JSON.parse(storageData);
 	try{
-		if(storageData.length !== 0){
-			for(let i=0; i < storageData.length; i++){
-				const parseData = JSON.parse(storageData);
+		if(parseData.length !== 0){
+			for(let i=0; i < parseData.length; i++){
 				dataCollection.push(parseData[i]);
 				addingTask(dataCollection[i]["title"], dataCollection[i]["id"]);
 			}

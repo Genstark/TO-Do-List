@@ -66,10 +66,10 @@ function reCheck() {
 }
 document.addEventListener("DOMContentLoaded", function () {
     var storageData = localStorage.getItem("item");
+    var parseData = JSON.parse(storageData);
     try {
-        if (storageData.length !== 0) {
-            for (var i = 0; i < storageData.length; i++) {
-                var parseData = JSON.parse(storageData);
+        if (parseData.length !== 0) {
+            for (var i = 0; i < parseData.length; i++) {
                 dataCollection.push(parseData[i]);
                 addingTask(dataCollection[i]["title"], dataCollection[i]["id"]);
             }
