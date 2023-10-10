@@ -35,17 +35,17 @@ function addingTask(title: string, taskId: string | number): void{
     const mainClass = document.getElementById('mainClass') as HTMLElement;
 
 	mainClass.innerHTML += `
-	<div id="main" class="main container">
-		<div class="maindata input-group mb-3 justify-content-center align-items-center d-flex">
-			<div class="input-group-text rounded checkboxheight">
-				<input class="form-check-input mt-0 checkbox1" type="checkbox" value="" aria-label="Checkbox for following text input" onchange="checkBox(this, '${taskId}')">
+		<div id="main" class="main container">
+			<div class="maindata input-group mb-3 justify-content-center align-items-center d-flex">
+				<div class="input-group-text rounded checkboxheight">
+					<input class="form-check-input mt-0 checkbox1" type="checkbox" value="" aria-label="Checkbox for following text input" onchange="checkBox(this, '${taskId}')">
+				</div>
+				<div class="mainTask rounded">
+					<span class="title">${title}</span>
+				</div>
+				<button type="button" class="btn btn-danger rounded" onclick="removeTask(this, '${taskId}')" id="deleteButton">Delete</button>
 			</div>
-			<div class="mainTask rounded">
-				<span class="title">${title}</span>
-			</div>
-			<button type="button" class="btn btn-danger rounded" onclick="removeTask(this, '${taskId}')" id="deleteButton">Delete</button>
 		</div>
-	</div>
 	`;
 }
 
