@@ -86,8 +86,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 dataCollection.push(parseData[i]);
                 addingTask(dataCollection[i]["title"], dataCollection[i]["id"]);
             }
-            reCheck();
         }
+        reCheck();
     }
     catch (_a) {
         console.log('localstorage is empty');
