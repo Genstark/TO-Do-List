@@ -53,7 +53,7 @@ function addingTask(title: string, taskId: string | number): void{
 			<div class="alert alert-success alert-dismissible" role="alert">
 				<div class="form-checkbox">
 			   		<input class="form-check-input checkbox1" type="checkbox" value="" id="flexCheckDefault" onchange="checkBox(this, '${taskId}')">
-					<label class="form-check-label title" for="flexCheckDefault">${title}</label>
+					<label class="form-check-label title fw-bolder" for="flexCheckDefault">${title}</label>
 					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onclick="removeTask(this, '${taskId}')" id="deleteButton"></button>
 		  		</div>
 			</div>

@@ -39,7 +39,7 @@ function addingTask(title, taskId) {
     // 		</div>
     // 	</div>
     // `;
-    mainClass.innerHTML += "\n\t\t<div id=\"main\" class=\"container\">\n\t\t\t<div class=\"alert alert-success alert-dismissible\" role=\"alert\">\n\t\t\t\t<div class=\"form-checkbox\">\n\t\t\t   \t\t<input class=\"form-check-input checkbox1\" type=\"checkbox\" value=\"\" id=\"flexCheckDefault\" onchange=\"checkBox(this, '".concat(taskId, "')\">\n\t\t\t\t\t<label class=\"form-check-label title\" for=\"flexCheckDefault\">").concat(title, "</label>\n\t\t\t\t\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\" onclick=\"removeTask(this, '").concat(taskId, "')\" id=\"deleteButton\"></button>\n\t\t  \t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t");
+    mainClass.innerHTML += "\n\t\t<div id=\"main\" class=\"container\">\n\t\t\t<div class=\"alert alert-success alert-dismissible\" role=\"alert\">\n\t\t\t\t<div class=\"form-checkbox\">\n\t\t\t   \t\t<input class=\"form-check-input checkbox1\" type=\"checkbox\" value=\"\" id=\"flexCheckDefault\" onchange=\"checkBox(this, '".concat(taskId, "')\">\n\t\t\t\t\t<label class=\"form-check-label title fw-bolder\" for=\"flexCheckDefault\">").concat(title, "</label>\n\t\t\t\t\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\" onclick=\"removeTask(this, '").concat(taskId, "')\" id=\"deleteButton\"></button>\n\t\t  \t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t");
 }
 function removeTask(event, taskId) {
     for (var i = 0; i <= dataCollection.length; i++) {
