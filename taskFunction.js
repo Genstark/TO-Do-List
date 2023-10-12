@@ -26,7 +26,20 @@ function addTask() {
 }
 function addingTask(title, taskId) {
     var mainClass = document.getElementById('mainClass');
-    mainClass.innerHTML += "\n\t\t<div id=\"main\" class=\"main container\">\n\t\t\t<div class=\"maindata input-group mb-3 justify-content-center align-items-center d-flex\">\n\t\t\t\t<div class=\"input-group-text rounded checkboxheight\">\n\t\t\t\t\t<input class=\"form-check-input mt-0 checkbox1\" type=\"checkbox\" value=\"\" aria-label=\"Checkbox for following text input\" onchange=\"checkBox(this, '".concat(taskId, "')\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"mainTask rounded\">\n\t\t\t\t\t<span class=\"title\">").concat(title, "</span>\n\t\t\t\t</div>\n\t\t\t\t<button type=\"button\" class=\"btn btn-danger rounded\" onclick=\"removeTask(this, '").concat(taskId, "')\" id=\"deleteButton\">Delete</button>\n\t\t\t</div>\n\t\t</div>\n\t");
+    // mainClass.innerHTML += `
+    // 	<div id="main" class="main container">
+    // 		<div class="maindata input-group mb-3 justify-content-center align-items-center d-flex">
+    // 			<div class="input-group-text rounded checkboxheight">
+    // 				<input class="form-check-input mt-0 checkbox1" type="checkbox" value="" aria-label="Checkbox for following text input" onchange="checkBox(this, '${taskId}')">
+    // 			</div>
+    // 			<div class="mainTask rounded">
+    // 				<span class="title">${title}</span>
+    // 			</div>
+    // 			<button type="button" class="btn btn-danger rounded" onclick="removeTask(this, '${taskId}')" id="deleteButton">Delete</button>
+    // 		</div>
+    // 	</div>
+    // `;
+    mainClass.innerHTML += "\n\t\t<div id=\"main\" class=\"container\">\n\t\t\t<div class=\"alert alert-success alert-dismissible\" role=\"alert\">\n\t\t\t\t<div class=\"form-checkbox\">\n\t\t\t   \t\t<input class=\"form-check-input checkbox1\" type=\"checkbox\" value=\"\" id=\"flexCheckDefault\" onchange=\"checkBox(this, '".concat(taskId, "')\">\n\t\t\t\t\t<label class=\"form-check-label title\" for=\"flexCheckDefault\">").concat(title, "</label>\n\t\t\t\t\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\" onclick=\"removeTask(this, '").concat(taskId, "')\" id=\"deleteButton\"></button>\n\t\t  \t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t");
 }
 function removeTask(event, taskId) {
     for (var i = 0; i <= dataCollection.length; i++) {

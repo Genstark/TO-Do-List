@@ -23,13 +23,13 @@ h3{
 	font-family: cursive;
 }
 
-.container{
+/* .container{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-top: 30px;
 	box-sizing: border-box;
-}
+} */
 
 .userinput{
 	border-radius: 10px;
